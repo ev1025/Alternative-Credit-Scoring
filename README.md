@@ -84,8 +84,10 @@
 ## 4. 데이터 분석
 ### 1) 데이터 전처리
 - 1차적으로 팀원들이 모여 불필요한 변수 제거
-- 이상치 제거, 스케일링
+- 이상치 일괄 제거    
+![image](https://github.com/user-attachments/assets/7d38b9bf-dda9-4b71-a243-94360020f0fd)
 
+- 완전히 다른 지표를 비교하는 것이기 때문에 `MinMaxScaling` 진행
 
 - 학습 데이터와 예측 데이터의 공통 핵심 지표를 설계한 뒤 핵심지표에 해당하는 변수를 포함
 - 이후 성별과 연령 데이터를 원핫 인코딩 하여 병합
@@ -126,6 +128,10 @@ credit_mapping = {
 }
 ```
 ![image](https://github.com/user-attachments/assets/1d2bbc0b-f9eb-48ac-9243-97b925b04457)
+
+### 2) 모델링
+**사용 모델**   
+- x
 
 
 ---
