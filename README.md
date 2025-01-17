@@ -85,10 +85,12 @@
 ### 1) 데이터 전처리
 - 1차적으로 팀원들이 모여 불필요한 변수 제거
 - 이상치 일괄 제거    
-![image](https://github.com/user-attachments/assets/7d38b9bf-dda9-4b71-a243-94360020f0fd)
+![image](https://github.com/user-attachments/assets/685f05e1-e465-4f9f-a9c7-c30b52ac2aa0)
 
-- 완전히 다른 지표를 비교하는 것이기 때문에 `MinMaxScaling` 진행
 
+- **데이터 스케일링** : 완전히 다른 지표를 비교하는 것이기 때문에 `MinMaxScaling` 진행
+- **데이터 분리** : train(60%), validation(20%), test(20%)    
+- **불균형 데이터 처리** : `Undersampling`을 진행하여 라벨 불균형을 해소    
 - 학습 데이터와 예측 데이터의 공통 핵심 지표를 설계한 뒤 핵심지표에 해당하는 변수를 포함
 - 이후 성별과 연령 데이터를 원핫 인코딩 하여 병합
 
@@ -127,11 +129,11 @@ credit_mapping = {
     ]
 }
 ```
-![image](https://github.com/user-attachments/assets/1d2bbc0b-f9eb-48ac-9243-97b925b04457)
+![image](https://github.com/user-attachments/assets/4304da5c-121b-4a5a-9361-e28843cfdc5e)
+
+
 
 ### 2) 모델링
-- **데이터 분리** : train(60%), validation(20%), test(20%)    
-- **불균형 데이터 처리** : `Undersampling`을 진행하여 라벨 불균형을 해소    
 - **사용 모델** : `XGBoostclassifier`, `RandomForestClassifier`   
   - 두 모델은 데이터의 노이즈나 이상치에 강하다.
   - 다양한 특성을 가진 데이터를 효과적으로 학습할 수 있어 대안 신용 평가 모델에 적절하다고 판단   
