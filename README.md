@@ -130,8 +130,13 @@ credit_mapping = {
 ![image](https://github.com/user-attachments/assets/1d2bbc0b-f9eb-48ac-9243-97b925b04457)
 
 ### 2) 모델링
-**사용 모델**   
-- x
+- **데이터 분리** : train(60%), validation(20%), test(20%)    
+- **불균형 데이터 처리** : `Undersampling`을 진행하여 라벨 불균형을 해소    
+- **사용 모델** : `XGBoostclassifier`, `RandomForestClassifier`   
+  - 두 모델은 데이터의 노이즈나 이상치에 강하다.
+  - 다양한 특성을 가진 데이터를 효과적으로 학습할 수 있어 대안 신용 평가 모델에 적절하다고 판단   
+- **하이퍼 파라미터 튜닝** : `GridSearchCV`를 사용하여 최적의 하이퍼 파라미터를 튜닝    
+
 
 
 ---
