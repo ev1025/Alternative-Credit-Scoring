@@ -168,7 +168,7 @@ credit_mapping = {
 
 
 ### 4) 불균형 데이터 언더 샘플링 학습 결과
-- 소폭의 성능 향상은 있었으나 무의미한 결과
+- 소폭의 성능 향상은 있었으나 무의미한 결과    
 ![Frame 7](https://github.com/user-attachments/assets/34b7d2a1-439c-4d2f-83eb-187bd1791711)
 
 
