@@ -153,18 +153,29 @@ credit_mapping = {
 
 ## 5. 모델 평가 및 결론
 ### 1) 직접 선별한 칼럼에 대한 학습결과
+- accuracy 자체는 높지만 실질적으로 분류 성능이 좋지 않음
 ![Frame 4](https://github.com/user-attachments/assets/fe059274-8a14-4962-8e87-d0c2b4f35936)
 
 ### 2) 상관계수가 높은 칼럼들을 선별한 학습결과
+- 성능의 상승이 있었지만 크지 않음
 ![Frame 5](https://github.com/user-attachments/assets/902cf4fd-ffbc-4e4c-a064-d1bd084062a5)
 
-### 3) 불균형 데이터 언더 샘플링 테스트 결과
+### 3) 피쳐중요도 낮은 칼럼 제거 후 학습 결과   
+- 랜덤 포레스트에서 확인된 피쳐중요도를 기반으로 성별, 연령 피쳐 삭제    
+- 과적합 발생하여 성능 저하    
+![image](https://github.com/user-attachments/assets/44869bb9-fe48-4296-b1d2-ca2f2c5cd391)
+![Frame 8](https://github.com/user-attachments/assets/a69a49d3-ca78-431d-99dc-7143a8ac1cd4)
+
+
+### 4) 불균형 데이터 언더 샘플링 학습 결과
+- 소폭의 성능 향상은 있었으나 무의미한 결과
 ![Frame 7](https://github.com/user-attachments/assets/34b7d2a1-439c-4d2f-83eb-187bd1791711)
 
-### 4) 평가지표
+
+### 5) 평가지표
 ![image](https://github.com/user-attachments/assets/1e6323ec-f854-4af3-a1ad-39671222b061)
 
-### 5) 결론
+### 6) 결론
 - 서울 시민생활 데이터를 이용한 신용카드 연체 여부 예측은 불가능한 것으로 결론을 내렸다.
 - 대안 데이터의 유효성을 검증을 위해서는 실제 신용 정보 데이터와 연결할 식별자가 있어야 하는데 데이터의 한계가 있었다.
 - 서울 시민 생활 데이터는 개인 데이터가 아닌 동네 평균 데이터로 개인의 특성을 담아내기 어려워 설명력이 낮았다.
